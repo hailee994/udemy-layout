@@ -1,0 +1,38 @@
+.service {
+  background-color: $color-white-cream;
+  margin-top: $mg-2;
+  padding: 24px 0;
+
+  .service__item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 24px;
+    background-color: #fff;
+    border: 1px solid #e8e9eb;
+    border-radius: $border-radius;
+
+    .item__icon {
+      @include styleText($color-black-light, $fs-4, $fw-normal);
+      margin-right: $mg-1+6;
+    }
+
+    .item__text {
+      h4 {
+        font-weight: $fw-bold;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      p {
+        @include styleText($color-gray-4, 15px, $fw-normal);
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+//responsive
+.service {
+  @include responsive('medium') {}
+}

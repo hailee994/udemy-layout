@@ -1,0 +1,37 @@
+@mixin styleText($color, $fs, $fw) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+}
+
+@mixin styleBtn($bdColor, $bgColor, $pd-y, $pd-x, $radius) {
+  border: 1px solid $bdColor;
+  background-color: $bgColor;
+  padding: $pd-y $pd-x;
+  border-radius: $radius;
+}
+
+@mixin styleBtnHover($bdColor, $bgColor, $color) {
+  border-color: $bdColor;
+  background-color: $bgColor;
+  color: $color;
+}
+
+// lay man hinh co kich thuoc small
+@mixin responsive($screen) {
+
+  //$map: ten mang can duyet
+  //$key: gia tri can tra ve
+  @if(map-has-key($map: $breakpoints, $key: $screen)) {
+    // neu ten man hinh dung thi lay gia tri
+    $value: map-get($map: $breakpoints, $key: $screen);
+
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Man hinh khong co";
+  }
+}

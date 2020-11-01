@@ -1,0 +1,43 @@
+.banner__content {
+  background-color: $color-black-0;
+  color: $color-white-0;
+
+  .row {
+    margin-right: 0;
+
+    .col {
+      font-size: $fs-3;
+    }
+
+    .col-4 {
+      height: 100%;
+
+      &:nth-child(1),
+      &:nth-child(3) {
+        font-size: $fs-3;
+
+        i {
+          padding-top: 50px;
+        }
+      }
+
+      &:nth-child(2) {
+        h4 {
+          font-weight: $fw-bold;
+        }
+      }
+    }
+  }
+}
+
+.banner__content {
+  @include responsive('large') {
+
+    .col,
+    .col-4 {
+      i {
+        display: none;
+      }
+    }
+  }
+}

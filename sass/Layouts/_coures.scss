@@ -1,0 +1,86 @@
+.coures {
+  margin-top: $mg-2;
+
+  .coures__content {
+    .coures__intro {
+      background-color: $color-gray-5;
+      padding: 113px 32px;
+
+      h5 {
+        font-weight: $fw-bold;
+      }
+    }
+  }
+
+  .myTab {
+
+    // NAV
+    .nav {
+      border-bottom: none;
+      justify-content: space-between;
+
+      .nav-link {
+        @include styleText($color-black-0, $fs-0, $fw-normal);
+        border: none;
+      }
+
+      .nav-link:hover {
+        border: none;
+        @include styleText($color-blue, $fs-0, $fw-normal);
+      }
+
+      .nav-link.active {
+        border: none;
+        border-bottom: 5px solid #007791;
+      }
+    }
+
+    //CARD
+    .tab-content {
+      position: relative;
+
+      .card-title {
+        @include styleText($color-black-0, $fs-0, $fw-bold);
+      }
+
+      .card-text {
+        @include styleText($color-gray-4, $fs-1, $fw-normal);
+      }
+
+      .rating {
+        .rating__star {
+          color: $color-yellow;
+        }
+
+        span:nth-child(2) {
+          margin: 0 $mg-0;
+        }
+
+        span:nth-child(3) {
+          color: $color-gray-4;
+        }
+      }
+
+      //Price
+      .price {
+        .old {
+          @include styleText($color-gray-4, $fs-0, $fw-normal);
+          text-decoration: line-through;
+        }
+
+        .new {
+          @include styleText($color-black-0, $fs-0, $fw-bold);
+        }
+      }
+    }
+  }
+}
+
+//responsive
+.coures {
+  @include responsive('large') {
+    .coures__intro {
+      display: none;
+    }
+  }
+}

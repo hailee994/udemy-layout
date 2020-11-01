@@ -1,0 +1,28 @@
+// Helper
+@import "./Helper/variables";
+@import "./Helper/mixin";
+
+// Vendors: folder thu vien --> chi import .scss
+
+// Base
+@import "./Base/reset";
+@import "./Base/customizes";
+
+// components
+@import "./Components/button";
+
+// layouts
+@import "./Layouts/header";
+@import "./Layouts/carousel";
+@import "./Layouts/intro";
+@import "./Layouts/coures";
+@import "./Layouts/service";
+@import "./Layouts/student";
+@import "./Layouts/banner";
+@import "./Layouts/categories";
+@import "./Layouts/comment";
+@import "./Layouts/company";
+@import "./Layouts/footer";
+// page
+
+// themes

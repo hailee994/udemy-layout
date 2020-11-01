@@ -1,0 +1,42 @@
+.company {
+  background-color: $color-gray-5;
+
+  .company__content {
+    width: 80%;
+    margin: 0 auto;
+
+    p {
+      color: $color-gray-4;
+    }
+  }
+
+  .company__text {
+    .col-md-6 {
+      &:nth-child(1) {
+        border-right: 1px solid $color-gray-2;
+      }
+
+      .text__content {
+        width: 50%;
+        margin: 0 auto;
+
+        h4 {
+          font-weight: $fw-bold;
+        }
+      }
+    }
+  }
+}
+
+//responsive
+.company {
+  @include responsive("medium") {
+    .company__text {
+      .col-md-6 {
+        &:nth-child(1) {
+          border-right: none;
+        }
+      }
+    }
+  }
+}

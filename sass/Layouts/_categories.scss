@@ -1,0 +1,38 @@
+.categories__content {
+  width: 80%;
+  margin: 0 auto;
+
+  h3 {
+    font-weight: $fw-bold;
+    margin-bottom: $mg-1;
+  }
+
+  .categories__item {
+    .item {
+      width: 99%;
+      margin: 0 auto 10px;
+      border: 1px solid $color-gray-2;
+      padding: 10px;
+      border-radius: 2px;
+      border-bottom: 2px solid $color-gray-2;
+      cursor: pointer;
+
+      span {
+        &:nth-child(1) {
+          @include styleText(#14171c, 32px, $fw-normal);
+          margin-right: $mg-1;
+        }
+
+        &:nth-child(2) {
+          @include styleText(#14171c, $fs-2, $fw-normal);
+          line-height: 40px;
+        }
+      }
+
+      &:hover {
+        box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),
+          0 3px 1px 0 rgba(20, 23, 28, 0.1);
+      }
+    }
+  }
+}

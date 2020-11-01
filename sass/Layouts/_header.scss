@@ -1,0 +1,126 @@
+header {
+  @include styleText($color-black-light, $fs-1, $fw-normal);
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+
+  .navbar-brand {
+    img {
+      width: 110px;
+    }
+  }
+
+  .header__cate {
+    padding: 0 20px;
+  }
+
+  .header__form {
+    // neu khong khai bao thi gia tri la 0
+    flex: 1;
+
+    .input-group {
+      .form-control {
+        background-color: $color-white-cream;
+        border: none;
+        transition: none;
+        padding: $pd-2 $pd-2;
+
+        &:focus {
+          box-shadow: none;
+          background-color: #fff;
+          border: 1px solid #dedfe0;
+          border-right: none;
+        }
+
+        &:focus+.input-group-append {
+          .input-group-text {
+            box-shadow: none;
+            background-color: #fff;
+            border: 1px solid #dedfe0;
+            border-left: none;
+          }
+
+          &:hover {
+            .input-group-text {
+              background-color: $color-red-0;
+              color: $color-white-0;
+            }
+          }
+        }
+      }
+
+      .input-group-append {
+        .input-group-text {
+          background-color: $color-white-cream;
+          border: none;
+          color: $color-red-0;
+          cursor: pointer;
+        }
+
+        &:hover {
+          .input-group-text {
+            background-color: $color-red-0;
+            color: $color-white-0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.header__right {
+  .navbar-nav {
+    justify-content: center;
+
+    .nav-item {
+      .nav-link {
+        @include styleText($color-black-light, $fs-1, $fw-normal);
+        padding: $pd-1 $pd-2;
+      }
+
+      &:hover {
+        .nav-link {
+          background-color: $color-gray-1;
+        }
+      }
+    }
+
+
+    .nav-item:nth-child(3) {
+      a {
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+// responsive
+.header__right {
+  @include responsive("extra-large") {
+
+    .bussiness,
+    .teach {
+      display: none;
+    }
+  }
+
+  @include responsive("medium") {
+
+    .btnGroup {
+      display: none;
+    }
+  }
+}
+
+.header__left {
+  @include responsive("medium") {
+    justify-content: center;
+
+    .header__form,
+    .header__cate {
+      display: none;
+    }
+  }
+}
